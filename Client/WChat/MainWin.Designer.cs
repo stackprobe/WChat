@@ -56,6 +56,7 @@
 			this.RemarkText = new System.Windows.Forms.TextBox();
 			this.BtnSend = new System.Windows.Forms.Button();
 			this.MainTimer = new System.Windows.Forms.Timer(this.components);
+			this.RemarkTextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.TopMenu.SuspendLayout();
 			this.BottomStatus.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.MainSplit)).BeginInit();
@@ -307,6 +308,7 @@
 			// 
 			// RemarkText
 			// 
+			this.RemarkText.ContextMenuStrip = this.RemarkTextMenu;
 			this.RemarkText.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.RemarkText.Location = new System.Drawing.Point(0, 0);
 			this.RemarkText.MaxLength = 30000;
@@ -335,6 +337,11 @@
 			// 
 			this.MainTimer.Enabled = true;
 			this.MainTimer.Tick += new System.EventHandler(this.MainTimer_Tick);
+			// 
+			// RemarkTextMenu
+			// 
+			this.RemarkTextMenu.Name = "RemarkTextMenu";
+			this.RemarkTextMenu.Size = new System.Drawing.Size(61, 4);
 			// 
 			// MainWin
 			// 
@@ -406,6 +413,7 @@
 		private System.Windows.Forms.ToolStripStatusLabel LeftStatusMessage;
 		private System.Windows.Forms.ToolStripMenuItem ツールTToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem ファイル又はフォルダの貼り付けDToolStripMenuItem;
+		private System.Windows.Forms.ContextMenuStrip RemarkTextMenu;
 	}
 }
 
