@@ -66,36 +66,7 @@ namespace Charlotte
 
 				// < orig
 
-				BusyDlg.Perform(delegate
-				{
-					BusyDlg.I.SetMessage("コマンドの完了を待っています。");
-
-					Gnd.I.ChatMan.End();
-
-					BusyDlg.I.SetMessage("ログアウトしています。");
-
-					Gnd.I.ChatMan.LogoutCommand(Gnd.I.Sd.Ident);
-					Gnd.I.ChatMan.Destroy();
-					Gnd.I.ChatMan = null;
-
-					BusyDlg.I.SetMessage("ファイル転送サーバーを停止しています。");
-
-					Gnd.I.FileSvMan.End();
-
-					BusyDlg.I.SetMessage("ファイル転送クライアントを停止しています。");
-
-					Gnd.I.NamedTrackHttpMan.End();
-
-					BusyDlg.I.SetMessage("ファイル転送・中継サーバーを停止しています。(NT)");
-
-					Gnd.I.NamedTrackMan.End();
-
-					BusyDlg.I.SetMessage("ファイル転送・中継サーバーを停止しています。(RC)");
-
-					Gnd.I.RevClientMan.End();
-
-					BusyDlg.I.SetMessage("プログラムを終了しています。");
-				});
+				// ここではフォームを開けない -> MainWin.cs CloseWindow()
 
 				GlobalProcMtx.Release();
 				procMtx.ReleaseMutex();

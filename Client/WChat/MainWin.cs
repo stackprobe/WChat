@@ -6,11 +6,32 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Permissions;
 
 namespace Charlotte
 {
 	public partial class MainWin : Form
 	{
+		#region ALT_F4 抑止
+
+		private bool XPressed;
+
+		[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.UnmanagedCode)]
+		protected override void WndProc(ref Message m)
+		{
+			const int WM_SYSCOMMAND = 0x112;
+			const long SC_CLOSE = 0xF060L;
+
+			if (m.Msg == WM_SYSCOMMAND && (m.WParam.ToInt64() & 0xFFF0L) == SC_CLOSE)
+			{
+				this.XPressed = true;
+				return;
+			}
+			base.WndProc(ref m);
+		}
+
+		#endregion
+
 		public MainWin()
 		{
 			InitializeComponent();
@@ -77,11 +98,54 @@ namespace Charlotte
 
 		private void MainWin_FormClosed(object sender, FormClosedEventArgs e)
 		{
+			// noop
+		}
+
+		private void CloseWindow()
+		{
 			this.MT_Enabled = false;
 
 			Gnd.I.TimeLine = null;
 			Gnd.I.Heartbeat = null;
 			Gnd.I.MainWin = null;
+
+			this.Visible = false;
+
+			// プロセス終了時にすること
+			{
+				BusyDlg.Perform(delegate
+				{
+					BusyDlg.I.SetMessage("コマンドの完了を待っています。");
+
+					Gnd.I.ChatMan.End();
+
+					BusyDlg.I.SetMessage("ログアウトしています。");
+
+					Gnd.I.ChatMan.LogoutCommand(Gnd.I.Sd.Ident);
+					Gnd.I.ChatMan.Destroy();
+					Gnd.I.ChatMan = null;
+
+					BusyDlg.I.SetMessage("ファイル転送サーバーを停止しています。");
+
+					Gnd.I.FileSvMan.End();
+
+					BusyDlg.I.SetMessage("ファイル転送クライアントを停止しています。");
+
+					Gnd.I.NamedTrackHttpMan.End();
+
+					BusyDlg.I.SetMessage("ファイル転送・中継サーバーを停止しています。(NT)");
+
+					Gnd.I.NamedTrackMan.End();
+
+					BusyDlg.I.SetMessage("ファイル転送・中継サーバーを停止しています。(RC)");
+
+					Gnd.I.RevClientMan.End();
+
+					BusyDlg.I.SetMessage("プログラムを終了しています。");
+				});
+			}
+
+			this.Close();
 		}
 
 		private bool MT_Enabled;
@@ -130,6 +194,13 @@ namespace Charlotte
 
 				Gnd.I.TimeLine.EachTimer();
 				Gnd.I.Heartbeat.EachTimer();
+
+				if (this.XPressed)
+				{
+					this.XPressed = false;
+					this.CloseWindow();
+					return;
+				}
 			}
 			catch (Exception ex)
 			{
@@ -144,7 +215,7 @@ namespace Charlotte
 
 		private void 終了XToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			this.CloseWindow();
 		}
 
 		private void RefreshUi()
