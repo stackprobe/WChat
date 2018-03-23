@@ -53,7 +53,7 @@ namespace Charlotte
 
 				// ログオフ・シャットダウンした場合、ここまで来ない。
 
-				Gnd.I.ConsoleProcEnd();
+				// ここではフォームを開けない -> MainWin.cs CloseWindow()
 
 				GlobalProcMtx.Release();
 				procMtx.ReleaseMutex();

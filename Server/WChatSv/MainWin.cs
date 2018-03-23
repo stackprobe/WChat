@@ -6,11 +6,34 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Permissions;
 
 namespace Charlotte
 {
 	public partial class MainWin : Form
 	{
+		#region ALT_F4 抑止
+
+		[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.UnmanagedCode)]
+		protected override void WndProc(ref Message m)
+		{
+			const int WM_SYSCOMMAND = 0x112;
+			const long SC_CLOSE = 0xF060L;
+
+			if (m.Msg == WM_SYSCOMMAND && (m.WParam.ToInt64() & 0xFFF0L) == SC_CLOSE)
+			{
+				this.BeginInvoke((MethodInvoker)delegate
+				{
+					this.CloseWindow();
+				});
+
+				return;
+			}
+			base.WndProc(ref m);
+		}
+
+		#endregion
+
 		public MainWin()
 		{
 			InitializeComponent();
@@ -39,6 +62,18 @@ namespace Charlotte
 
 		private void 終了XToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			this.CloseWindow();
+		}
+
+		private void CloseWindow()
+		{
+			this.Visible = false;
+
+			// プロセス終了時にすること
+			{
+				Gnd.I.ConsoleProcEnd();
+			}
+
 			this.Close();
 		}
 
