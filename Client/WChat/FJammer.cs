@@ -10,7 +10,7 @@ namespace Charlotte
 	{
 		public static void Decode(string file)
 		{
-			string encFile = file + ".fkug";
+			string encFile = file + ".fjam";
 
 			if (File.Exists(encFile))
 			{

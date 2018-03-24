@@ -108,9 +108,9 @@ namespace Charlotte
 				Gnd.I.RevServer.Start(this.RevServerFile, this.RevServerPort + " a 1");
 		}
 
-		public void ConsoleProcEnd()
+		public void ConsoleProcEnd(bool alwaysShowDlg = false)
 		{
-			if (this.ConsoleProcEndTimer(0) == false)
+			if (alwaysShowDlg || this.ConsoleProcEndTimer(0) == false)
 			{
 				using (BusyDlg f = new BusyDlg(this.ConsoleProcEndTimer))
 				{

@@ -71,7 +71,7 @@ namespace Charlotte
 
 			// プロセス終了時にすること
 			{
-				Gnd.I.ConsoleProcEnd();
+				Gnd.I.ConsoleProcEnd(true);
 			}
 
 			this.Close();
@@ -79,8 +79,8 @@ namespace Charlotte
 
 		private void 設定SToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Gnd.I.ConsoleProcEnd();
 			this.Visible = false;
+			Gnd.I.ConsoleProcEnd(true);
 
 			using (SettingWin f = new SettingWin())
 			{
