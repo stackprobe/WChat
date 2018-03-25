@@ -108,9 +108,9 @@ namespace Charlotte
 				Gnd.I.RevServer.Start(this.RevServerFile, this.RevServerPort + " a 1");
 		}
 
-		public void ConsoleProcEnd(bool alwaysShowDlg = false)
+		public void ConsoleProcEnd()
 		{
-			if (alwaysShowDlg || this.ConsoleProcEndTimer(0) == false)
+			if (this.ConsoleProcEndTimer(0) == false)
 			{
 				using (BusyDlg f = new BusyDlg(this.ConsoleProcEndTimer))
 				{
@@ -119,24 +119,41 @@ namespace Charlotte
 			}
 		}
 
+		private int CPET_Phase;
+		private ProcessMan CPET_ProcMan;
+
 		public bool ConsoleProcEndTimer(long count)
 		{
-			if (count % 20 == 0)
+			switch (this.CPET_Phase)
 			{
-				ProcessMan pm = new ProcessMan();
+				case 0:
+					if (this.ChatSv.IsEnd() && this.RevServer.IsEnd()) return true;
+					break;
 
-				if (this.ChatSv.IsEnd() == false)
-				{
-					pm.Start(this.ChatSvFile, "/S " + Gnd.I.ChatSvPort);
-					pm.End();
-				}
-				if (this.RevServer.IsEnd() == false)
-				{
-					pm.Start(this.RevServerFile, Gnd.I.RevServerPort + " a 1 /S");
-					pm.End();
-				}
+				case 1:
+					this.CPET_ProcMan = new ProcessMan();
+					this.CPET_ProcMan.Start(this.ChatSvFile, "/S " + Gnd.I.ChatSvPort);
+					break;
+
+				case 2:
+					if (this.CPET_ProcMan.IsEnd() == false) return false;
+					break;
+
+				case 3:
+					this.CPET_ProcMan.Start(this.RevServerFile, Gnd.I.RevServerPort + " a 1 /S");
+					break;
+
+				case 4:
+					if (this.CPET_ProcMan.IsEnd() == false) return false;
+					this.CPET_ProcMan = null;
+					break;
+
+				case 20:
+					this.CPET_Phase = 0;
+					return false;
 			}
-			return this.ChatSv.IsEnd() && this.RevServer.IsEnd();
+			this.CPET_Phase++;
+			return false;
 		}
 	}
 }

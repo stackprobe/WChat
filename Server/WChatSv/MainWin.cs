@@ -47,7 +47,7 @@ namespace Charlotte
 		private void MainWin_Shown(object sender, EventArgs e)
 		{
 			Gnd.I.Init_Files(); // zantei -- ウィルス対策ソフトか何かで FJammer.Decode が重いことがある。
-			this.RefreshUi();
+			this.RefreshUi_RestartServers();
 		}
 
 		private void MainWin_FormClosing(object sender, FormClosingEventArgs e)
@@ -71,7 +71,7 @@ namespace Charlotte
 
 			// プロセス終了時にすること
 			{
-				Gnd.I.ConsoleProcEnd(true);
+				Gnd.I.ConsoleProcEnd();
 			}
 
 			this.Close();
@@ -80,7 +80,7 @@ namespace Charlotte
 		private void 設定SToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.Visible = false;
-			Gnd.I.ConsoleProcEnd(true);
+			Gnd.I.ConsoleProcEnd();
 
 			using (SettingWin f = new SettingWin())
 			{
@@ -88,29 +88,29 @@ namespace Charlotte
 			}
 			Gnd.I.DoSave();
 			this.Visible = true;
-			this.RefreshUi();
+			this.RefreshUi_RestartServers();
 		}
 
 		private void 開始SToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Gnd.I.ServerStartFlag = true;
-			this.RefreshUi();
+			this.RefreshUi_RestartServers();
 		}
 
 		private void 停止TToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Gnd.I.ServerStartFlag = false;
-			this.RefreshUi();
+			this.RefreshUi_RestartServers();
 		}
 
 		private void ファイル転送サーバーFToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Gnd.I.RevServerEnabled = Gnd.I.RevServerEnabled == false;
 			Gnd.I.DoSave();
-			this.RefreshUi();
+			this.RefreshUi_RestartServers();
 		}
 
-		private void RefreshUi()
+		private void RefreshUi_RestartServers()
 		{
 			this.開始SToolStripMenuItem.Checked = Gnd.I.ServerStartFlag;
 			this.停止TToolStripMenuItem.Checked = Gnd.I.ServerStartFlag == false;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Charlotte
 {
@@ -20,8 +21,9 @@ namespace Charlotte
 
 		public Mode_e Mode = Mode_e.非表示;
 
+		private Thread ProcStartTh;
 		private Process Proc;
-		private string LastCommandLine;
+		private string LastCommandLine = "<none>";
 
 		public void Start(string file, string args)
 		{
@@ -50,12 +52,25 @@ namespace Charlotte
 				if (this.Mode == Mode_e.表示_最小化)
 					psi.WindowStyle = ProcessWindowStyle.Minimized;
 			}
-			this.Proc = Process.Start(psi);
+
+			this.ProcStartTh = new Thread(() =>
+			{
+				this.Proc = Process.Start(psi);
+			});
+
+			this.ProcStartTh.Start();
 			this.LastCommandLine = commandLine;
 		}
 
 		public bool IsEnd()
 		{
+			if (this.ProcStartTh != null)
+			{
+				if (this.ProcStartTh.Join(0) == false)
+					return false;
+
+				this.ProcStartTh = null;
+			}
 			if (this.Proc == null)
 				return true;
 
@@ -70,6 +85,11 @@ namespace Charlotte
 
 		public void End()
 		{
+			if (this.ProcStartTh != null)
+			{
+				this.ProcStartTh.Join();
+				this.ProcStartTh = null;
+			}
 			if (this.Proc == null)
 				return;
 

@@ -112,19 +112,17 @@ namespace Charlotte
 
 			this.MT_Count++;
 
+			if (this.D_Timer(this.MT_Count) && 10 < this.MT_Count)
+			{
+				this.MT_Enabled = false;
+				this.Close();
+				return;
+			}
+
 			{
 				Image img = this.MainPic.Image;
 				img.RotateFlip(RotateFlipType.Rotate90FlipNone);
 				this.MainPic.Image = img;
-			}
-
-			if (this.MT_Count < 10)
-				return;
-
-			if (this.D_Timer(this.MT_Count))
-			{
-				this.MT_Enabled = false;
-				this.Close();
 			}
 		}
 	}
