@@ -28,7 +28,7 @@ namespace Charlotte
 
 		// ----
 
-		public delegate bool Timer_d(long count);
+		public delegate bool Timer_d();
 		private Timer_d D_Timer;
 
 		public BusyDlg(Timer_d d_timer)
@@ -112,7 +112,7 @@ namespace Charlotte
 
 			this.MT_Count++;
 
-			if (this.D_Timer(this.MT_Count) && 10 < this.MT_Count)
+			if (this.D_Timer() && 10 < this.MT_Count)
 			{
 				this.MT_Enabled = false;
 				this.Close();

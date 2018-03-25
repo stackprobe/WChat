@@ -110,7 +110,7 @@ namespace Charlotte
 
 		public void ConsoleProcEnd()
 		{
-			if (this.ConsoleProcEndTimer(0) == false)
+			if (this.ConsoleProcEndTimer() == false)
 			{
 				using (BusyDlg f = new BusyDlg(this.ConsoleProcEndTimer))
 				{
@@ -119,41 +119,54 @@ namespace Charlotte
 			}
 		}
 
-		private int CPET_Phase;
-		private ProcessMan CPET_ProcMan;
+		private IEnumerator<bool> CPET_IE = null;
 
-		public bool ConsoleProcEndTimer(long count)
+		private IEnumerable<bool> CPET_GetIE()
 		{
-			switch (this.CPET_Phase)
+			ProcessMan pm = new ProcessMan();
+
+			for (; ; )
 			{
-				case 0:
-					if (this.ChatSv.IsEnd() && this.RevServer.IsEnd()) return true;
-					break;
+				while (this.ChatSv.IsEnd() && this.RevServer.IsEnd())
+				{
+					yield return true;
+				}
+				if (this.ChatSv.IsEnd() == false)
+				{
+					pm.Start(this.ChatSvFile, "/S " + Gnd.I.ChatSvPort);
 
-				case 1:
-					this.CPET_ProcMan = new ProcessMan();
-					this.CPET_ProcMan.Start(this.ChatSvFile, "/S " + Gnd.I.ChatSvPort);
-					break;
+					do
+					{
+						yield return false;
+					}
+					while (pm.IsEnd() == false);
+				}
+				if (this.RevServer.IsEnd() == false)
+				{
+					pm.Start(this.RevServerFile, Gnd.I.RevServerPort + " a 1 /S");
 
-				case 2:
-					if (this.CPET_ProcMan.IsEnd() == false) return false;
-					break;
-
-				case 3:
-					this.CPET_ProcMan.Start(this.RevServerFile, Gnd.I.RevServerPort + " a 1 /S");
-					break;
-
-				case 4:
-					if (this.CPET_ProcMan.IsEnd() == false) return false;
-					this.CPET_ProcMan = null;
-					break;
-
-				case 20:
-					this.CPET_Phase = 0;
-					return false;
+					do
+					{
+						yield return false;
+					}
+					while (pm.IsEnd() == false);
+				}
+				for (int c = 0; c < 20; c++)
+				{
+					yield return false;
+				}
 			}
-			this.CPET_Phase++;
-			return false;
+		}
+
+		public bool ConsoleProcEndTimer()
+		{
+			if (this.CPET_IE == null)
+				this.CPET_IE = this.CPET_GetIE().GetEnumerator();
+
+			if (this.CPET_IE.MoveNext() == false)
+				throw null; // never
+
+			return this.CPET_IE.Current;
 		}
 	}
 }
