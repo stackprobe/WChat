@@ -129,7 +129,7 @@ namespace Charlotte
 
 				this.I.Rtf = rtb.SelectedRtf;
 
-				this.OtherCtrl.Focus();
+				//this.OtherCtrl.Focus();
 			}
 			catch (Exception e)
 			{
@@ -152,6 +152,8 @@ namespace Charlotte
 		{
 			try
 			{
+				this.OtherCtrl.Focus(); // @ 2018.5.13
+
 				this.I.SelectionStart = this.I.Text.Length;
 				this.I.SelectionLength = 0;
 				this.I.ScrollToCaret();
