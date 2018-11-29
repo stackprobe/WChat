@@ -1,73 +1,73 @@
 ===============================================================================
 
-@WChat - ƒ`ƒƒƒbƒgƒc[ƒ‹
+ã€€WChat - ãƒãƒ£ãƒƒãƒˆãƒ„ãƒ¼ãƒ«
 
 ===============================================================================
 
 
-¡ƒ\ƒtƒg‚ÌŠT—v
+â– ã‚½ãƒ•ãƒˆã®æ¦‚è¦
 
-@ƒNƒ‰ƒCƒAƒ“ƒgEƒT[ƒo[•ûŽ®‚Ìƒ`ƒƒƒbƒgƒc[ƒ‹‚Å‚·B
-@ƒtƒ@ƒCƒ‹‹¤—LE“]‘—‹@”\‚Æ‚µ‚ÄAŠeƒNƒ‰ƒCƒAƒ“ƒg‚Ìƒ[ƒJƒ‹ƒfƒBƒXƒN‚ðƒuƒ‰ƒEƒU‚Å‰{——‚·‚é‹@”\‚ª•t‚¢‚Ä‚¢‚Ü‚·B
-@ƒZƒLƒ…ƒŠƒeƒB‚Í“Á‚Él—¶‚µ‚Ä‚¢‚Ü‚¹‚ñB‚k‚`‚m“à‚Å‚Ì—˜—p‚ð‚¨‚·‚·‚ß‚µ‚Ü‚·B
+ã€€ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆãƒ»ã‚µãƒ¼ãƒãƒ¼æ–¹å¼ã®ãƒãƒ£ãƒƒãƒˆãƒ„ãƒ¼ãƒ«ã§ã™ã€‚
+ã€€ãƒ•ã‚¡ã‚¤ãƒ«å…±æœ‰ãƒ»è»¢é€æ©Ÿèƒ½ã¨ã—ã¦ã€å„ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆã®ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‡ã‚£ã‚¹ã‚¯ã‚’ãƒ–ãƒ©ã‚¦ã‚¶ã§é–²è¦§ã™ã‚‹æ©Ÿèƒ½ãŒä»˜ã„ã¦ã„ã¾ã™ã€‚
+ã€€ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã¯ç‰¹ã«è€ƒæ…®ã—ã¦ã„ã¾ã›ã‚“ã€‚ï¼¬ï¼¡ï¼®å†…ã§ã®åˆ©ç”¨ã‚’ãŠã™ã™ã‚ã—ã¾ã™ã€‚
 
-@ƒ\[ƒXƒR[ƒh‚ðŒöŠJ‚µ‚Ä‚¢‚Ü‚·B
-
-
-¡“®ìŠÂ‹«
-
-@Windows 10
-@Šm”F‚µ‚Ä‚¢‚Ü‚¹‚ñ‚ª Windows 7/8/8.1 ‚Å‚à“®‚­‚©‚à‚µ‚ê‚Ü‚¹‚ñB
-
-@.NET Framework 4 ‚ðŽg—p‚µ‚Ü‚·B
+ã€€ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‚’å…¬é–‹ã—ã¦ã„ã¾ã™ã€‚
 
 
-¡ƒtƒHƒ‹ƒ_\¬
+â– å‹•ä½œç’°å¢ƒ
 
-@WChat_Client@...@ƒNƒ‰ƒCƒAƒ“ƒg
-@WChat_Server@...@ƒT[ƒo[
+ã€€Windows 10
+ã€€ç¢ºèªã—ã¦ã„ã¾ã›ã‚“ãŒ Windows 7/8/8.1 ã§ã‚‚å‹•ãã‹ã‚‚ã—ã‚Œã¾ã›ã‚“ã€‚
 
-
-¡ƒCƒ“ƒXƒg[ƒ‹•û–@
-
-@ƒA[ƒJƒCƒu“à‚Ì WChat_Client, WChat_Server ‚ðƒ[ƒJƒ‹ƒfƒBƒXƒNã‚Ì”CˆÓ‚ÌêŠ‚ÉƒRƒs[‚µ‚Ä‰º‚³‚¢B
+ã€€.NET Framework 4 ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚
 
 
-¡ƒAƒ“ƒCƒ“ƒXƒg[ƒ‹•û–@
+â– ãƒ•ã‚©ãƒ«ãƒ€æ§‹æˆ
 
-@ƒŒƒWƒXƒgƒŠ‚È‚Ç‚ÍˆêØŽg‚Á‚Ä‚¢‚Ü‚¹‚ñB
-@ƒtƒ@ƒCƒ‹‚ðíœ‚·‚é‚¾‚¯‚ÅƒAƒ“ƒCƒ“ƒXƒg[ƒ‹‚Å‚«‚Ü‚·B
-
-
-¡Žg‚¢•û
-
-@ŠeƒtƒHƒ‹ƒ_‚Ì Readme.txt ‚ðŽQÆ‚µ‚Ä‰º‚³‚¢B
+ã€€WChat_Clientã€€...ã€€ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆ
+ã€€WChat_Serverã€€...ã€€ã‚µãƒ¼ãƒãƒ¼
 
 
-¡ƒ\[ƒXƒR[ƒh
+â– ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ–¹æ³•
 
-@main
-
-@@https://github.com/stackprobe/CSharp/tree/master/WChat
-
-@external
-
-@@https://github.com/stackprobe/Factory/tree/master/SubTools/Chat
-@@https://github.com/stackprobe/Factory/tree/master/Labo/Socket/tunnel
-@@https://github.com/stackprobe/Factory/tree/master/Resource
+ã€€ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–å†…ã® WChat_Client, WChat_Server ã‚’ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‡ã‚£ã‚¹ã‚¯ä¸Šã®ä»»æ„ã®å ´æ‰€ã«ã‚³ãƒ”ãƒ¼ã—ã¦ä¸‹ã•ã„ã€‚
 
 
-@šÅV‚ÌƒŠƒ|ƒWƒgƒŠ‚ÍƒŠƒŠ[ƒXŽž‚Ìƒ\[ƒXƒR[ƒh‚ÆˆÙ‚È‚é‚©‚à‚µ‚ê‚Ü‚¹‚ñB
+â– ã‚¢ãƒ³ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ–¹æ³•
+
+ã€€ãƒ¬ã‚¸ã‚¹ãƒˆãƒªãªã©ã¯ä¸€åˆ‡ä½¿ã£ã¦ã„ã¾ã›ã‚“ã€‚
+ã€€ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã™ã‚‹ã ã‘ã§ã‚¢ãƒ³ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã§ãã¾ã™ã€‚
 
 
-¡Žæ‚èˆµ‚¢Ží•Ê
+â– ä½¿ã„æ–¹
 
-@ƒtƒŠ[ƒ\ƒtƒg
+ã€€å„ãƒ•ã‚©ãƒ«ãƒ€ã® Readme.txt ã‚’å‚ç…§ã—ã¦ä¸‹ã•ã„ã€‚
 
 
-¡ìŽÒ‚Ö‚Ì˜A—æ
+â– ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰
 
-@stackprobes@gmail.com
+ã€€main
 
-@ƒoƒO‚â—v–]‚È‚Ç‚²˜A—‚­‚¾‚³‚¢B
+ã€€ã€€https://github.com/stackprobe/CSharp/tree/master/WChat
+
+ã€€external
+
+ã€€ã€€https://github.com/stackprobe/Factory/tree/master/SubTools/Chat
+ã€€ã€€https://github.com/stackprobe/Factory/tree/master/Labo/Socket/tunnel
+ã€€ã€€https://github.com/stackprobe/Factory/tree/master/Resource
+
+
+ã€€â˜…æœ€æ–°ã®ãƒªãƒã‚¸ãƒˆãƒªã¯ãƒªãƒªãƒ¼ã‚¹æ™‚ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¨ç•°ãªã‚‹ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“ã€‚
+
+
+â– å–ã‚Šæ‰±ã„ç¨®åˆ¥
+
+ã€€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆ
+
+
+â– ä½œè€…ã¸ã®é€£çµ¡å…ˆ
+
+ã€€stackprobes@gmail.com
+
+ã€€ãƒã‚°ã‚„è¦æœ›ãªã©ã”é€£çµ¡ãã ã•ã„ã€‚
 
