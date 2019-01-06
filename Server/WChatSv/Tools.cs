@@ -16,7 +16,7 @@ namespace Charlotte
 			{
 				WriteLog("awdss_2");
 
-				foreach (string exeFile in Directory.GetFiles(BootTools.SelfDir, "*.exe", SearchOption.AllDirectories))
+				foreach (string exeFile in Directory.GetFiles(BootTools.SelfDir, "*.exe", SearchOption.TopDirectoryOnly))
 				{
 					try
 					{

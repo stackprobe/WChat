@@ -48,7 +48,7 @@
 
 　main
 
-　　https://github.com/stackprobe/CSharp/tree/master/WChat
+　　https://github.com/stackprobe/WChat
 
 　external
 
