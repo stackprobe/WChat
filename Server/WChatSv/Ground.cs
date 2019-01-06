@@ -168,5 +168,10 @@ namespace Charlotte
 
 			return this.CPET_IE.Current;
 		}
+
+		public bool Is初回起動()
+		{
+			return File.Exists(DAT_FILE) == false; // ? DoSave()を1度も実行していない。
+		}
 	}
 }

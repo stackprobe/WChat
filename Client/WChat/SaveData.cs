@@ -173,5 +173,10 @@ namespace Charlotte
 				StringTools.ENCODING_SJIS
 				);
 		}
+
+		public bool Is初回起動()
+		{
+			return File.Exists(SystemTools.GetSaveDataFile()) == false; // ? Save()を1度も実行していない。
+		}
 	}
 }

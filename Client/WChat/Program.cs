@@ -47,6 +47,10 @@ namespace Charlotte
 				SystemTools.WriteLog("LOG_TEST_03");
 #endif
 
+				SystemTools.WL_MainWinStatus_Enabled = false;
+				SystemTools.AntiWindowsDefenderSmartScreen();
+				SystemTools.WL_MainWinStatus_Enabled = true;
+
 				Gnd.I.Sd.Load();
 				Gnd.I.Sd.PostLoad();
 

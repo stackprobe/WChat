@@ -22,35 +22,34 @@ namespace Charlotte
 			File.Delete(GetLogFile());
 		}
 
-		public static void WriteLog(object e)
+		public static bool WL_MainWinStatus_Enabled = true;
+
+		public static void WriteLog(object message)
 		{
 			try
 			{
 				if (WL_Enabled == false)
 					return;
 
+				if (WL_MainWinStatus_Enabled)
 				{
-					string message = "" + e;
+					string tmpMsg = "" + message;
 
-					int index = StringTools.IndexOfChar(message, "\r\n");
+					int index = StringTools.IndexOfChar(tmpMsg, "\r\n");
 
 					if (index != -1)
-						message = message.Substring(0, index);
+						tmpMsg = tmpMsg.Substring(0, index);
 
 					EventCenter.I.AddEvent(Consts.EVENT_PREFERENCE, delegate
 					{
-						Gnd.I.MainWin.SetStatusMessage(message);
+						Gnd.I.MainWin.SetStatusMessage(tmpMsg);
 					});
 				}
 
-				if (1000 < WL_Count)
-					return;
-
-				using (StreamWriter sw = new StreamWriter(GetLogFile(), true, StringTools.ENCODING_SJIS))
+				using (StreamWriter sw = new StreamWriter(GetLogFile(), WL_Count++ % 1000 != 0, StringTools.ENCODING_SJIS))
 				{
-					sw.WriteLine("[" + DateTime.Now + "." + WL_Count + "] " + e);
+					sw.WriteLine("[" + DateTime.Now + "." + WL_Count.ToString("D3") + "] " + message);
 				}
-				WL_Count++;
 			}
 			catch
 			{ }
@@ -195,6 +194,42 @@ namespace Charlotte
 			{ }
 
 			return "IP_UNKNOWN";
+		}
+
+		public static void AntiWindowsDefenderSmartScreen()
+		{
+			WriteLog("awdss_1");
+
+			if (Gnd.I.Sd.Is初回起動())
+			{
+				WriteLog("awdss_2");
+
+				foreach (string exeFile in Directory.GetFiles(BootTools.SelfDir, "*.exe", SearchOption.AllDirectories))
+				{
+					try
+					{
+						WriteLog("awdss_exeFile: " + exeFile);
+
+						if (exeFile.ToLower() == BootTools.SelfFile.ToLower())
+						{
+							WriteLog("awdss_self_noop");
+						}
+						else
+						{
+							byte[] exeData = File.ReadAllBytes(exeFile);
+							File.Delete(exeFile);
+							File.WriteAllBytes(exeFile, exeData);
+						}
+						WriteLog("awdss_OK");
+					}
+					catch (Exception e)
+					{
+						WriteLog(e);
+					}
+				}
+				WriteLog("awdss_3");
+			}
+			WriteLog("awdss_4");
 		}
 	}
 }

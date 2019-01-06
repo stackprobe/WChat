@@ -76,6 +76,7 @@
     <Compile Include="SettingWin.Designer.cs">
       <DependentUpon>SettingWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools.cs" />
     <EmbeddedResource Include="BusyDlg.resx">
       <DependentUpon>BusyDlg.cs</DependentUpon>
     </EmbeddedResource>

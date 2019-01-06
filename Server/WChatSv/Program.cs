@@ -39,6 +39,8 @@ namespace Charlotte
 					Directory.CreateDirectory(DIR);
 				}
 
+				Tools.AntiWindowsDefenderSmartScreen();
+
 				//Gnd.I.Init_Files(); // moved -> MainWin_Shown()
 				Gnd.I.DoLoad();
 				//Gnd.I.ConsoleProcBegin(); // moved
