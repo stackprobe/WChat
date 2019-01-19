@@ -61,6 +61,8 @@ namespace Charlotte
 			}
 
 			this.RefreshUi_FieldChanged();
+
+			SystemTools.PostShown(this);
 		}
 
 		private void RefreshUi_FieldChanged()

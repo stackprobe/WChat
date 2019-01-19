@@ -51,6 +51,8 @@ namespace Charlotte
 		{
 			this.MinimumSize = this.Size;
 			this.RefreshUi_FieldChanged();
+
+			SystemTools.PostShown(this);
 		}
 
 		private void BtnColorDlg_Click(object sender, EventArgs e)

@@ -62,6 +62,8 @@ namespace Charlotte
 			this.DoLoad();
 			this.RefreshUi();
 
+			SystemTools.PostShown(this);
+
 			this.ShownFlag = true;
 		}
 

@@ -56,7 +56,6 @@
 			this.RemarkText = new System.Windows.Forms.TextBox();
 			this.BtnSend = new System.Windows.Forms.Button();
 			this.MainTimer = new System.Windows.Forms.Timer(this.components);
-			this.RemarkTextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.TopMenu.SuspendLayout();
 			this.BottomStatus.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.MainSplit)).BeginInit();
@@ -83,7 +82,7 @@
 			this.TopMenu.Location = new System.Drawing.Point(0, 0);
 			this.TopMenu.Name = "TopMenu";
 			this.TopMenu.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-			this.TopMenu.Size = new System.Drawing.Size(442, 28);
+			this.TopMenu.Size = new System.Drawing.Size(442, 25);
 			this.TopMenu.TabIndex = 0;
 			this.TopMenu.Text = "menuStrip1";
 			// 
@@ -92,13 +91,13 @@
 			this.アプリAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.終了XToolStripMenuItem});
 			this.アプリAToolStripMenuItem.Name = "アプリAToolStripMenuItem";
-			this.アプリAToolStripMenuItem.Size = new System.Drawing.Size(74, 22);
+			this.アプリAToolStripMenuItem.Size = new System.Drawing.Size(61, 19);
 			this.アプリAToolStripMenuItem.Text = "アプリ(&A)";
 			// 
 			// 終了XToolStripMenuItem
 			// 
 			this.終了XToolStripMenuItem.Name = "終了XToolStripMenuItem";
-			this.終了XToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+			this.終了XToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
 			this.終了XToolStripMenuItem.Text = "終了(&X)";
 			this.終了XToolStripMenuItem.Click += new System.EventHandler(this.終了XToolStripMenuItem_Click);
 			// 
@@ -113,53 +112,53 @@
             this.toolStripMenuItem1,
             this.その他の設定SToolStripMenuItem});
 			this.設定SToolStripMenuItem.Name = "設定SToolStripMenuItem";
-			this.設定SToolStripMenuItem.Size = new System.Drawing.Size(62, 22);
+			this.設定SToolStripMenuItem.Size = new System.Drawing.Size(57, 19);
 			this.設定SToolStripMenuItem.Text = "設定(&S)";
 			// 
 			// ユーザーリストを表示しないUToolStripMenuItem
 			// 
 			this.ユーザーリストを表示しないUToolStripMenuItem.Name = "ユーザーリストを表示しないUToolStripMenuItem";
-			this.ユーザーリストを表示しないUToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.ユーザーリストを表示しないUToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			this.ユーザーリストを表示しないUToolStripMenuItem.Text = "ユーザーリストを表示しない(&U)";
 			this.ユーザーリストを表示しないUToolStripMenuItem.Click += new System.EventHandler(this.ユーザーリストを表示しないUToolStripMenuItem_Click);
 			// 
 			// ユーザーリストの幅を固定するLToolStripMenuItem
 			// 
 			this.ユーザーリストの幅を固定するLToolStripMenuItem.Name = "ユーザーリストの幅を固定するLToolStripMenuItem";
-			this.ユーザーリストの幅を固定するLToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.ユーザーリストの幅を固定するLToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			this.ユーザーリストの幅を固定するLToolStripMenuItem.Text = "ユーザーリストの幅を固定する(&L)";
 			this.ユーザーリストの幅を固定するLToolStripMenuItem.Click += new System.EventHandler(this.ユーザーリストの幅を固定するLToolStripMenuItem_Click);
 			// 
 			// 入力エリアの高さを固定するTToolStripMenuItem
 			// 
 			this.入力エリアの高さを固定するTToolStripMenuItem.Name = "入力エリアの高さを固定するTToolStripMenuItem";
-			this.入力エリアの高さを固定するTToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.入力エリアの高さを固定するTToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			this.入力エリアの高さを固定するTToolStripMenuItem.Text = "入力エリアの高さを固定する(&T)";
 			this.入力エリアの高さを固定するTToolStripMenuItem.Click += new System.EventHandler(this.入力エリアの高さを固定するTToolStripMenuItem_Click);
 			// 
 			// 送信ボタンを表示しないHToolStripMenuItem
 			// 
 			this.送信ボタンを表示しないHToolStripMenuItem.Name = "送信ボタンを表示しないHToolStripMenuItem";
-			this.送信ボタンを表示しないHToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.送信ボタンを表示しないHToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			this.送信ボタンを表示しないHToolStripMenuItem.Text = "送信ボタンを表示しない(&H)";
 			this.送信ボタンを表示しないHToolStripMenuItem.Click += new System.EventHandler(this.送信ボタンを表示しないHToolStripMenuItem_Click);
 			// 
 			// 送信ボタンの幅を固定するBToolStripMenuItem
 			// 
 			this.送信ボタンの幅を固定するBToolStripMenuItem.Name = "送信ボタンの幅を固定するBToolStripMenuItem";
-			this.送信ボタンの幅を固定するBToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.送信ボタンの幅を固定するBToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			this.送信ボタンの幅を固定するBToolStripMenuItem.Text = "送信ボタンの幅を固定する(&B)";
 			this.送信ボタンの幅を固定するBToolStripMenuItem.Click += new System.EventHandler(this.送信ボタンの幅を固定するBToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(220, 6);
 			// 
 			// その他の設定SToolStripMenuItem
 			// 
 			this.その他の設定SToolStripMenuItem.Name = "その他の設定SToolStripMenuItem";
-			this.その他の設定SToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+			this.その他の設定SToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
 			this.その他の設定SToolStripMenuItem.Text = "その他の設定(&S)";
 			this.その他の設定SToolStripMenuItem.Click += new System.EventHandler(this.その他の設定SToolStripMenuItem_Click);
 			// 
@@ -168,13 +167,13 @@
 			this.ツールTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ファイル又はフォルダの貼り付けDToolStripMenuItem});
 			this.ツールTToolStripMenuItem.Name = "ツールTToolStripMenuItem";
-			this.ツールTToolStripMenuItem.Size = new System.Drawing.Size(74, 22);
+			this.ツールTToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
 			this.ツールTToolStripMenuItem.Text = "ツール(&T)";
 			// 
 			// ファイル又はフォルダの貼り付けDToolStripMenuItem
 			// 
 			this.ファイル又はフォルダの貼り付けDToolStripMenuItem.Name = "ファイル又はフォルダの貼り付けDToolStripMenuItem";
-			this.ファイル又はフォルダの貼り付けDToolStripMenuItem.Size = new System.Drawing.Size(383, 22);
+			this.ファイル又はフォルダの貼り付けDToolStripMenuItem.Size = new System.Drawing.Size(314, 22);
 			this.ファイル又はフォルダの貼り付けDToolStripMenuItem.Text = "ファイル又はフォルダへのハイパーリンクの貼り付け(&D)";
 			this.ファイル又はフォルダの貼り付けDToolStripMenuItem.Click += new System.EventHandler(this.ファイル又はフォルダの貼り付けDToolStripMenuItem_Click);
 			// 
@@ -183,17 +182,17 @@
 			this.BottomStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatusMessage,
             this.LeftStatusMessage});
-			this.BottomStatus.Location = new System.Drawing.Point(0, 537);
+			this.BottomStatus.Location = new System.Drawing.Point(0, 538);
 			this.BottomStatus.Name = "BottomStatus";
 			this.BottomStatus.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-			this.BottomStatus.Size = new System.Drawing.Size(442, 23);
+			this.BottomStatus.Size = new System.Drawing.Size(442, 22);
 			this.BottomStatus.TabIndex = 2;
 			this.BottomStatus.Text = "statusStrip1";
 			// 
 			// StatusMessage
 			// 
 			this.StatusMessage.Name = "StatusMessage";
-			this.StatusMessage.Size = new System.Drawing.Size(318, 18);
+			this.StatusMessage.Size = new System.Drawing.Size(336, 17);
 			this.StatusMessage.Spring = true;
 			this.StatusMessage.Text = "準備しています...";
 			this.StatusMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,13 +200,13 @@
 			// LeftStatusMessage
 			// 
 			this.LeftStatusMessage.Name = "LeftStatusMessage";
-			this.LeftStatusMessage.Size = new System.Drawing.Size(104, 18);
+			this.LeftStatusMessage.Size = new System.Drawing.Size(86, 17);
 			this.LeftStatusMessage.Text = "準備しています...";
 			// 
 			// MainSplit
 			// 
 			this.MainSplit.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.MainSplit.Location = new System.Drawing.Point(0, 28);
+			this.MainSplit.Location = new System.Drawing.Point(0, 25);
 			this.MainSplit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.MainSplit.Name = "MainSplit";
 			// 
@@ -218,7 +217,7 @@
 			// MainSplit.Panel2
 			// 
 			this.MainSplit.Panel2.Controls.Add(this.TimeLineSplit);
-			this.MainSplit.Size = new System.Drawing.Size(442, 509);
+			this.MainSplit.Size = new System.Drawing.Size(442, 513);
 			this.MainSplit.SplitterDistance = 147;
 			this.MainSplit.SplitterWidth = 5;
 			this.MainSplit.TabIndex = 1;
@@ -233,7 +232,7 @@
 			this.MemberList.ItemHeight = 20;
 			this.MemberList.Location = new System.Drawing.Point(0, 0);
 			this.MemberList.Name = "MemberList";
-			this.MemberList.Size = new System.Drawing.Size(147, 509);
+			this.MemberList.Size = new System.Drawing.Size(147, 513);
 			this.MemberList.TabIndex = 0;
 			this.MemberList.SelectedIndexChanged += new System.EventHandler(this.MemberList_SelectedIndexChanged);
 			// 
@@ -242,13 +241,13 @@
 			this.MemberListMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ホームディレクトリを開くHToolStripMenuItem});
 			this.MemberListMenu.Name = "MemberListMenu";
-			this.MemberListMenu.Size = new System.Drawing.Size(240, 26);
+			this.MemberListMenu.Size = new System.Drawing.Size(197, 26);
 			this.MemberListMenu.Opening += new System.ComponentModel.CancelEventHandler(this.MemberListMenu_Opening);
 			// 
 			// ホームディレクトリを開くHToolStripMenuItem
 			// 
 			this.ホームディレクトリを開くHToolStripMenuItem.Name = "ホームディレクトリを開くHToolStripMenuItem";
-			this.ホームディレクトリを開くHToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.ホームディレクトリを開くHToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
 			this.ホームディレクトリを開くHToolStripMenuItem.Text = "ホームディレクトリを開く(&H)";
 			this.ホームディレクトリを開くHToolStripMenuItem.Click += new System.EventHandler(this.ホームディレクトリを開くHToolStripMenuItem_Click);
 			// 
@@ -267,8 +266,8 @@
 			// TimeLineSplit.Panel2
 			// 
 			this.TimeLineSplit.Panel2.Controls.Add(this.RemarkSplit);
-			this.TimeLineSplit.Size = new System.Drawing.Size(290, 509);
-			this.TimeLineSplit.SplitterDistance = 411;
+			this.TimeLineSplit.Size = new System.Drawing.Size(290, 513);
+			this.TimeLineSplit.SplitterDistance = 414;
 			this.TimeLineSplit.SplitterWidth = 7;
 			this.TimeLineSplit.TabIndex = 0;
 			this.TimeLineSplit.TabStop = false;
@@ -279,7 +278,7 @@
 			this.TimeLineText.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.TimeLineText.Location = new System.Drawing.Point(0, 0);
 			this.TimeLineText.Name = "TimeLineText";
-			this.TimeLineText.Size = new System.Drawing.Size(290, 411);
+			this.TimeLineText.Size = new System.Drawing.Size(290, 414);
 			this.TimeLineText.TabIndex = 0;
 			this.TimeLineText.Text = "";
 			this.TimeLineText.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.TimeLineText_LinkClicked);
@@ -299,7 +298,7 @@
 			// RemarkSplit.Panel2
 			// 
 			this.RemarkSplit.Panel2.Controls.Add(this.BtnSend);
-			this.RemarkSplit.Size = new System.Drawing.Size(290, 91);
+			this.RemarkSplit.Size = new System.Drawing.Size(290, 92);
 			this.RemarkSplit.SplitterDistance = 212;
 			this.RemarkSplit.SplitterWidth = 5;
 			this.RemarkSplit.TabIndex = 0;
@@ -308,14 +307,13 @@
 			// 
 			// RemarkText
 			// 
-			this.RemarkText.ContextMenuStrip = this.RemarkTextMenu;
 			this.RemarkText.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.RemarkText.Location = new System.Drawing.Point(0, 0);
 			this.RemarkText.MaxLength = 30000;
 			this.RemarkText.Multiline = true;
 			this.RemarkText.Name = "RemarkText";
 			this.RemarkText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.RemarkText.Size = new System.Drawing.Size(212, 91);
+			this.RemarkText.Size = new System.Drawing.Size(212, 92);
 			this.RemarkText.TabIndex = 0;
 			this.RemarkText.TextChanged += new System.EventHandler(this.RemarkText_TextChanged);
 			this.RemarkText.Enter += new System.EventHandler(this.RemarkText_Enter);
@@ -327,7 +325,7 @@
 			this.BtnSend.Location = new System.Drawing.Point(0, 0);
 			this.BtnSend.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.BtnSend.Name = "BtnSend";
-			this.BtnSend.Size = new System.Drawing.Size(73, 91);
+			this.BtnSend.Size = new System.Drawing.Size(73, 92);
 			this.BtnSend.TabIndex = 0;
 			this.BtnSend.Text = "送信";
 			this.BtnSend.UseVisualStyleBackColor = true;
@@ -337,11 +335,6 @@
 			// 
 			this.MainTimer.Enabled = true;
 			this.MainTimer.Tick += new System.EventHandler(this.MainTimer_Tick);
-			// 
-			// RemarkTextMenu
-			// 
-			this.RemarkTextMenu.Name = "RemarkTextMenu";
-			this.RemarkTextMenu.Size = new System.Drawing.Size(61, 4);
 			// 
 			// MainWin
 			// 
@@ -413,7 +406,6 @@
 		private System.Windows.Forms.ToolStripStatusLabel LeftStatusMessage;
 		private System.Windows.Forms.ToolStripMenuItem ツールTToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem ファイル又はフォルダの貼り付けDToolStripMenuItem;
-		private System.Windows.Forms.ContextMenuStrip RemarkTextMenu;
 	}
 }
 

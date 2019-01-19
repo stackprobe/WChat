@@ -23,6 +23,11 @@ namespace Charlotte
 			// noop
 		}
 
+		private void SettingWin_Shown(object sender, EventArgs e)
+		{
+			Tools.PostShown(this);
+		}
+
 		private void BtnCancel_Click(object sender, EventArgs e)
 		{
 			this.Close();

@@ -134,6 +134,7 @@
 			this.Text = "設定";
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.SettingWin_Load);
+			this.Shown += new System.EventHandler(this.SettingWin_Shown);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

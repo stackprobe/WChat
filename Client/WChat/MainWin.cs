@@ -88,6 +88,8 @@ namespace Charlotte
 			}
 			if (Gnd.I.Sd.MainWinAlwaysTop)
 				EventTools.MainWinToTop();
+
+			SystemTools.PostShown(this);
 		}
 
 		private void MainWin_FormClosing(object sender, FormClosingEventArgs e)
