@@ -203,7 +203,7 @@ namespace Charlotte
 		{
 			WriteLog("awdss_1");
 
-			if (Gnd.I.Sd.Is初回起動())
+			if (Is初回起動())
 			{
 				WriteLog("awdss_2");
 
@@ -236,6 +236,11 @@ namespace Charlotte
 		}
 
 		// < sync
+
+		public static bool Is初回起動()
+		{
+			return Gnd.I.Sd.Is初回起動();
+		}
 
 		// sync > @ PostShown
 
