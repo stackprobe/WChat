@@ -57,25 +57,9 @@ namespace Charlotte
 
 		private void BtnColorDlg_Click(object sender, EventArgs e)
 		{
-			int[] customs = new int[16];
-
+			if (SaveLoadDialogs.SelectColor(ref _color))
 			{
-				Random r = new Random();
-
-				for (int c = 0; c < customs.Length; c++)
-					customs[c] = r.Next(0x1000000);
-			}
-
-			using (ColorDialog f = new ColorDialog())
-			{
-				f.Color = _color;
-				f.CustomColors = customs;
-
-				if (f.ShowDialog() == DialogResult.OK)
-				{
-					_color = f.Color;
-					this.RefreshUi_FieldChanged();
-				}
+				this.RefreshUi_FieldChanged();
 			}
 		}
 
