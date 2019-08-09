@@ -8,7 +8,7 @@ namespace Charlotte
 	/// <summary>
 	/// EventCenter.I.AddEvent() 用 Event_d コレクション
 	/// </summary>
-	public class EventCollection
+	public static class EventCollection
 	{
 		// ---- ChatMan ----
 

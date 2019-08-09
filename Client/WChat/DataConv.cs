@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Charlotte
 {
-	public class DataConv
+	public static class DataConv
 	{
 		/// <summary>
 		/// 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Charlotte
 {
-	public class ArrayTools
+	public static class ArrayTools
 	{
 		public static List<T> GetRange<T>(List<T> src, int startPos)
 		{

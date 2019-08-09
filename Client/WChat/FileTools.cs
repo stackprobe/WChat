@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Charlotte
 {
-	public class FileTools
+	public static class FileTools
 	{
 		public static string Correct(string path)
 		{

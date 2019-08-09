@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Charlotte
 {
-	public class Tools
+	public static class Tools
 	{
 		// sync > @ AntiWindowsDefenderSmartScreen
 

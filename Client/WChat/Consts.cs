@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Charlotte
 {
-	public class Consts
+	public static class Consts
 	{
 		public const string EVENT_PREFERENCE = "PREFERENCE";
 		public const string EVENT_REGULAR = "REGULAR";

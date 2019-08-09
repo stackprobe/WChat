@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace Charlotte
 {
-	public class AppTools
+	public static class AppTools
 	{
 		public static void Browse(string domain = "localhost", int portNo = 80, string path = "")
 		{

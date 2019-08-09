@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Charlotte
 {
-	public class FJammer
+	public static class FJammer
 	{
 		public static void Decode(string file)
 		{

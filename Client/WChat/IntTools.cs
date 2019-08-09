@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Charlotte
 {
-	public class IntTools
+	public static class IntTools
 	{
 		public static bool IsRange(int value, int minval, int maxval)
 		{

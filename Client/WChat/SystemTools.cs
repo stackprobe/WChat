@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Charlotte
 {
-	public class SystemTools
+	public static class SystemTools
 	{
 		private static bool WL_Enabled = false;
 		private static int WL_Count = 0;

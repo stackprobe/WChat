@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Charlotte
 {
-	public class EventTools
+	public static class EventTools
 	{
 		public static void MainWinToTop()
 		{

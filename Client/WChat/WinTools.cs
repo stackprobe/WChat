@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Charlotte
 {
-	public class WinTools
+	public static class WinTools
 	{
 		public static void SetVisible(Control ctrl, bool flag)
 		{

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Charlotte
 {
-	public class UtfStringFltr
+	public static class UtfStringFltr
 	{
 		private const string SERIALIZED_PREFIX = "$UTF8HEX_";
 
