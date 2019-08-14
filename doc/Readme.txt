@@ -11,8 +11,6 @@
 　ファイル共有・転送機能として、各クライアントのローカルディスクをブラウザで閲覧する機能が付いています。
 　セキュリティは特に考慮していません。ＬＡＮ内での利用をおすすめします。
 
-　ソースコードを公開しています。
-
 
 ■動作環境
 
@@ -39,22 +37,6 @@
 ■使い方
 
 　各フォルダの Readme.txt を参照して下さい。
-
-
-■ソースコード
-
-　main
-
-　　https://github.com/stackprobe/WChat
-
-　external
-
-　　https://github.com/stackprobe/Factory/tree/master/SubTools/Chat
-　　https://github.com/stackprobe/Factory/tree/master/Labo/Socket/tunnel
-　　https://github.com/stackprobe/Factory/tree/master/Resource
-
-
-　★最新のリポジトリはリリース時のソースコードと異なるかもしれません。
 
 
 ■取り扱い種別
