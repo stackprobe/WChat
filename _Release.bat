@@ -48,4 +48,4 @@ REN out\Server WChat_Server
 
 C:\Factory\SubTools\zip.exe /O out WChat
 
-PAUSE
+IF NOT "%1" == "/-P" PAUSE
