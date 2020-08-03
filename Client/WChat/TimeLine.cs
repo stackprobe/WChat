@@ -362,7 +362,7 @@ namespace Charlotte
 		{
 			bool redrawFlag = false;
 
-			for (int c = 0; c < 20; c++) // XXX
+			for (int c = 0; c < 20; c++) // todo
 			{
 				if (this.I.I.I.Text.Length < Gnd.I.Sd.TimeLineTextLenMax || this.RemarkDataList.Count < 2)
 					break;

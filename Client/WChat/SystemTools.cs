@@ -126,7 +126,7 @@ namespace Charlotte
 
 		public static uint GetCryptoRand(uint modulo)
 		{
-			return GetCryptoRand() % modulo; // FIXME
+			return GetCryptoRand() % modulo; // todo
 		}
 
 		public static uint GetCryptoRand(uint minval, uint maxval)

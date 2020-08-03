@@ -117,7 +117,7 @@ namespace Charlotte
 		}
 
 		/// <summary>
-		/// XXX
+		/// todo
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <param name="list"></param>
