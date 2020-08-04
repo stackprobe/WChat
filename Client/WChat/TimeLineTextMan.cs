@@ -105,7 +105,7 @@ namespace Charlotte
 					));
 			}
 
-			foreach(string linkPath in src.Message.LinkPaths)
+			foreach (string linkPath in src.Message.LinkPaths)
 			{
 				dest.Add(new RtbMan.Token(
 					new Font(Consts.DEFAULT_FONT_NAME, 10f),

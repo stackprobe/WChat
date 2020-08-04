@@ -116,21 +116,21 @@ namespace Charlotte
 			return false;
 		}
 
-		/// <summary>
-		/// HACK
-		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <param name="list"></param>
 		public static void RemoveNull<T>(List<T> list)
 		{
-			for (int index = 0; index < list.Count; index++)
-			{
-				if (list[index] == null)
-				{
-					list.RemoveAt(index);
-					index--;
-				}
-			}
+			RemoveAll(list, v => v == null);
+		}
+
+		public static void RemoveAll<T>(List<T> list, Predicate<T> match)
+		{
+			int w = 0;
+
+			for (int r = 0; r < list.Count; r++)
+				if (match(list[r]) == false)
+					list[w++] = list[r];
+
+			while (w < list.Count)
+				list.RemoveAt(list.Count - 1);
 		}
 	}
 }
