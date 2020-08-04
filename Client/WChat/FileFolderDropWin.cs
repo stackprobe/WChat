@@ -17,7 +17,7 @@ namespace Charlotte
 		{
 			InitializeComponent();
 
-			this.TopMost = Gnd.I.Sd.MainWinAlwaysTop; // todo
+			this.TopMost = Gnd.I.Sd.MainWinAlwaysTop; // HACK
 		}
 
 		private void FileFolderDropWin_Load(object sender, EventArgs e)

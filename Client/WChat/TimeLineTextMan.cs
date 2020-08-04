@@ -150,7 +150,7 @@ namespace Charlotte
 				for (int index = 1; index < lines.Count; index++)
 					lines[index] = "\n" + lines[index];
 
-				for (int c = 0; c < 20; c++) // todo -- てきとう -- 連続する改行を制限した方がいい気がする。
+				for (int c = 0; c < 20; c++) // HACK -- てきとう -- 連続する改行を制限した方がいい気がする。
 				{
 					for (int index = 1; index < lines.Count; index++)
 					{

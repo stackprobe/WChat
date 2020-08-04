@@ -56,7 +56,7 @@ namespace Charlotte
 
 		public void Check(TextBox tb, string validChrs, int minlen = 0, int maxlen = int.MaxValue)
 		{
-			tb.Text = tb.Text.Trim(); // todo
+			tb.Text = tb.Text.Trim(); // HACK
 
 			if (StringTools.ContainsOnly(tb.Text, validChrs) == false)
 			{
@@ -67,7 +67,7 @@ namespace Charlotte
 
 		public void Check(TextBox tb, bool okJpn, bool okRet, bool okTab, bool okSpc, int minlen = 0, int maxlen = int.MaxValue)
 		{
-			tb.Text = tb.Text.Trim(); // todo
+			tb.Text = tb.Text.Trim(); // HACK
 
 			if (JString.IsJString(tb.Text, okJpn, okRet, okTab, okSpc) == false)
 			{
