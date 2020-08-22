@@ -135,11 +135,11 @@ namespace Charlotte
 					{
 						ContextMenuStrip menu = new ContextMenuStrip();
 
-#if true
 						{
 							ToolStripMenuItem item = new ToolStripMenuItem();
 
-							item.Text = "内容をコピー";
+#if false
+							item.Text = "内容をクリップボードにコピー";
 							item.Click += (sdr, ev) =>
 							{
 								try
@@ -149,19 +149,13 @@ namespace Charlotte
 								catch
 								{ }
 							};
-
-							menu.Items.Add(item);
-						}
 #else
-						{
-							ToolStripMenuItem item = new ToolStripMenuItem();
-
 							item.Text = "項目なし";
 							item.Enabled = false;
+#endif
 
 							menu.Items.Add(item);
 						}
-#endif
 
 						c.ContextMenuStrip = menu;
 					}
