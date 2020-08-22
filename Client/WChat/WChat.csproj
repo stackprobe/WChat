@@ -107,7 +107,6 @@
     <Compile Include="FontWin.Designer.cs">
       <DependentUpon>FontWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FreezeUi.cs" />
     <Compile Include="GlobalProcMtx.cs" />
     <Compile Include="Ground.cs" />
     <Compile Include="Heartbeat.cs" />
@@ -131,6 +130,7 @@
     <Compile Include="QueueData.cs" />
     <Compile Include="ReflecTools.cs" />
     <Compile Include="SaveLoadDialogs.cs" />
+    <Compile Include="UISuspend.cs" />
     <Compile Include="UtfStringFltr.cs" />
     <Compile Include="RevClientMan.cs" />
     <Compile Include="RtbMan.cs" />

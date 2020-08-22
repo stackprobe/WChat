@@ -338,7 +338,7 @@ namespace Charlotte
 		/// </summary>
 		public void SettingChanged()
 		{
-			//using (new FreezeUi(Gnd.I.MainWin)) // フォーカスは飛んでいく
+			//using (new UISuspend(Gnd.I.MainWin)) // フォーカスは飛んでいく
 			{
 				this.I.I.Clear();
 				this.I.RefreshUi();
@@ -348,7 +348,7 @@ namespace Charlotte
 
 		public void Redraw()
 		{
-			//using (new FreezeUi(Gnd.I.MainWin)) // フォーカスは飛んでいく
+			//using (new UISuspend(Gnd.I.MainWin)) // フォーカスは飛んでいく
 			{
 				this.I.I.Clear();
 				this.I.Add(this.RemarkDataList);

@@ -49,7 +49,7 @@ namespace Charlotte
 		public void Join(string rtf, List<TimeLine.RemarkData> listAdd)
 		{
 #if true
-			//using (new FreezeUi(Gnd.I.MainWin)) // チラつきは減るけど、フォーカスがどっか行っちゃうorz
+			//using (new UISuspend(Gnd.I.MainWin)) // チラつきは減るけど、フォーカスがどっか行っちゃうorz
 			{
 				this.I.I.Rtf = rtf;
 				this.I.ScrollToBottom();
